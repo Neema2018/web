@@ -1,251 +1,372 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>ZERO SEVEN</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-	
-    <style>
-        *
-{
+<title>ZERO SEVEN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h2,h4,h5,h6 {font-family: "Raleway", sans-serif; font-size: 20px;}
 
-	padding: 0;
-	margin: 0;
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: rgb(7, 129, 34);
+}
+
+h1{font-size: 60px;
+   text-align: center;
+}
+
+h3{font-size: 20px;}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.w3-container{background-color:rgb(7 , 129, 34);
+}
+
+:root{
+	--primary: #ddd;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+html {
 	box-sizing: border-box;
-}
-h1{
-	font-size: 100px;
-	color: black;
-	text-align: center;
-}
-body
-{
-	background-color: #39393b;
-	color: black;
-}
-.menu-bar
-{
-	background: rgb(43, 43, 43);
-	text-align: center;
-
-}
-.menu-bar ul
-{
-	display: inline-flex;
-	list-style: none;
-	color: #fff;
-
-
-}
-.menu-bar ul li
-{
-	width: 120px;
-	margin: 15px;
-	padding: 15px;
-
-}
-.menu-bar ul li a
-{
-	text-decoration: none;
-	color: #fff;
-
-}
-.active, .menu-bar ul li:hover
-{
-	background: #0f0f0f;
-	border-radius: 3px;
-}
-.menu-bar .fa
-{
-	margin-right: 8px;
-}
-.sub-menu-1
-{
-	display: none;
-}
-.menu-bar ul li:hover .sub-menu-1
-{
-	display: block;
-	position: absolute;
-	background: #3d3d3d;
-	margin-top: 15px;
-	margin-left: -15px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul
-{
-	display: block;
-	margin: 10px;
-
-}
-.menu-bar ul li:hover .sub-menu-1 ul li
-{
-	width: 150px;
-	padding: 10px:
-	border-bottom: 1px dotted #fff;
-	background: transparent;
-	border-radius: 0;
-	text-align: left;
-
-}
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover 
-{
- color: #343636;
-} 
-;
-
+	font-family: Arial, Helvtica;
+	color: var(--dark);
 }
 body {
-  font-family: Arial;
+	background: #ccc;
+	margin: 30px 50px;
+	line-height: 1.4;
+
+}
+.btn {
+	background: var(--dark);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+.img{
+	max-width: 100%;
 }
 
-* {
-  box-sizing: border-box;
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
 }
 
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
+.top-container{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	'showcase showcase top-box-a'
+	'showcase showcase top-box-b'
 }
 
-form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #0f0f0f;
-  color: rgb(17, 17, 17);
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
+.showcase {
+	grid-area: showcase;
+	min-height: 400px;
+	background: url(s.jpeg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+.showcase h1 {
+	font-size: 4rem;
+	margin-bottom: 0;
+	color: var(--light);
+
+}
+.showcase p {
+	font-size: 1.3rem;
+	margin-top: 0;
+	color: var(--light);
+
+}
+.top-box {
+	background: var(--primary);
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	box-shadow: var(--shadow);
+	padding: 1.5rem;
+
 }
 
-form.example button:hover {
-  background: #0f0f0f;
+.top-box .price {
+	font-size: 2.5rem;
 }
 
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
+.top-box-a {
+	grid-area: top-box-a; 
 }
 
-/* Container holding the image and the text */
-.container {
-  position: relative;
+.top-box-b {
+	grid-area: top-box-b; 
 }
 
 
-.centered {
-  position: absolute;
-  font-size: 60px;
-  color: rgb(16, 17, 17);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.boxes {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)
+	);
+}
+
+.box {
+	background: var(--primary);
+	text-align: center;
+	padding: 1.5rem 2rem;
+	box-shadow: var(--shadow);
+
+}
+.info {
+	background: var(--primary);
+	box-shadow: var(--shadow);
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3rem;
+
+}
+
+.portfolio {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)
+	);
+}
+
+.portfolio img {
+	width: 100%;
+	box-shadow: var(--shadow);
+
+}
+
+footer {
+	margin-top: 2rem;
+	background: var(--dark);
+	color: var(--light);
+	text-align: center;
+	padding: 1rem;
+
+}
+@media(max-width: 700px) {
+	.top-container {
+		grid-template-areas: 
+		'showcase showcase'
+		'top-box-a top-box-b'
+	}
+
+	.showcase h1 {
+		font-size: 2.5rem;
+	}
+
+	.info {
+		grid-template-columns: 1fr;
+	}
+
+	.info.btn {
+		display: block;
+		text-align: center;
+		margin: auto;
+	}
 }
 
 
-	</style>
-	<!--  NavBar  -->
-	<div class="menu-bar">
-	<ul>
-		<li class="active"><a href="#"><i class="fa fa-home"><alt=""></i>Home</a></li>
-		<li><a href="#">Services</a>
-			<div class="sub-menu-1">
-				<ul>
-					<li><a href="child care.html"></a>Child Care</li>
-					<li><a href="Laundry.html"></a>Laundry Services</li>
-					<li><a href="general.html"></a>General house chores</li>
-					<li><a href="carwash.html"></a> Car wash services</li>
-					<li><a href="private.html"></a> Private tutoring</li>
-					<li><a href="private.html"></a>Carpet washing</li>
-					<li><a href="private.html"></a>Plumbing/electric works</li>
-					<li><a href="private.html"></a>Temporary driver</li>
-					<li><a href="private.html"></a>Car Mechanic/Car servicing.</li>
-					<li><a href="private.html"></a>Fumigation</li>
-					<li><a href="private.html"></a>Catering and baking services</li>
-					<li><a href="private.html"></a>WIFI installation</li>
-					<li><a href="private.html"></a>Painting</li>
-					<li><a href="private.html"></a>Masonry</li>
-					<li><a href="private.html"></a>Interior designers.</li>
-					<li><a href="private.html"></a>Hair-dressers</li>
-					
 
-				</ul>
+</style>
+<body>
 
-		</li>
-		<li><a href="#">We Are Hiring</a></li>
-		<li><a href="#">Contact us</a></li>
-<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Search.." name="search2">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-	</div>
-	</ul>
-		 </div>
-		 <!-- Header /Home   -->
-		 <img src="IMAGES/home3.jpeg" alt="tyjj" width="100%">
-		 </div>
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SERVICES</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>HIRING</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT US</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-		 <!--     Services Offered     -->
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+</nav>
+
+<!-- Header with full-height image -->
+<img src="IMAGES/home3.jpeg" style="110%">
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h1 class="w3-center">ABOUT ZERO SEVEN</h1>
+  <p>The domestic service application aims at creating a free platform for the largest domestic services supply and demand in communities near you. It is simply going to act as a bridge connecting service providers and consumers.
+    A research carried out by Ipsos on August 2018 shows that about 45% of Kenyans are self-employed whereas 12% of the population is unemployed. Only about 11% are employed in the private sector. According to the survey, main source of self-employment are foodstuffs kiosk, agriculture produce marketing, general goods kiosk, livestock marketing, boutique, hairdressing, transport, builder and in the mechanical repairs. (Information extracted from the Ipsos survey)
+    The idea is to advertise this self employed population that administers domestic services so that it is easier for them to reach potential consumers. 
+   </p>
+
+   <!--  Services  -->
+   <h1>OUR SERVICES</h1>
+   <div class="w3-container" id="services"></div>
+		<section class="boxes">
+			<div class="box">
+				<i class="fa fa-child fa-2x" ></i>
+				<h3>Child care</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-sign-language fa-2x" ></i>
+				<h3>Laundry Services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-black-tie fa-2x" ></i>
+				<h3>General house chore</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-book fa-2x" ></i>
+				<h3>Private tutoring</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-car fa-2x" ></i>
+				<h3>Car wash services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-snowflake-o fa-2x" ></i>
+				<h3>Carpet washing</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-wrench fa-2x" ></i>
+				<h3>Plumbing/Electric works</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-taxi fa-2x" ></i>
+				<h3>Temporary driver</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-cogs fa-2x" ></i>
+				<h3>Car mechanic</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-bug fa-2x" ></i>
+				<h3>Fumigation</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div><div class="box">
+				<i class="fa fa-cutlery fa-2x" ></i>
+				<h3>Catering and Baking services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div><div class="box">
+				<i class="fa fa-wifi fa-2x" ></i>
+				<h3>Wifi instalattion</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-paint-brush fa-2x" ></i>
+				<h3>Painting</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-hand-lizard-o fa-2x" ></i>
+				<h3>Masonry</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-home fa-2x" ></i>
+				<h3>Interior designers</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+		</section>
+</div>
 
 
+<!-- We Are Hiring -->
+<div class="w3-container w3-center" style="width: 100%;" id="pricing">
+  <h1>WE ARE HIRING</h1>
+  <p class="w3-large">If you offer any of the services above we are hiring.</p>
+  <img src="IMAGES/hiring1.jpg" width="100%">
 
-		 <!--    We are Hiring    -->
+<!-- Contact Section -->
+<div class="w3-container " style="padding:128px 16px" id="contact">
+  <h1 class="w3-center">CONTACT US</h1>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+      <div style="margin-top:48px">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Nairobi,Kenya</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254704445312</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndongi@gmail.</p>
+    </form>
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 
-		 <h1>WE ARE HIRING!!!!</h1>
-		 <br>
-		 <div class="container">
-		 <img src="IMAGES/hiring3.jpg" alt="yujh" width="100%">
-		 <div class="centered">JOBS<br>AVAILABLE!!!</div>
-		 </div>
-		 <!--    Contact Us     -->
-		 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		 <header class="w3-container w3-teal">
-			<h1>Contact Us</h1>
-		  </header>
-		  
-		  <div class="w3-container w3-margin-center">
-		  
-		  <form class="w3-container w3-card-4">
-		  
-		  <p>
-		  <input class="w3-input" type="text" style="width:50%" required>
-		  <label>Name</label></p>
-		  <p>
-		  <input class="w3-input" type="password" style="width:50%" required>
-		  <label>Password</label></p>
-		  
-		  <p>
-		  <input class="w3-radio" type="radio" name="gender" value="male" checked>
-		  <label>Male</label></p>
-		  
-		  <p>
-		  <input class="w3-radio" type="radio" name="gender" value="female">
-		  <label>Female</label></p>
-		  
-		  <p>
-		  <input class="w3-radio" type="radio" name="gender" value="" disabled>
-		  <label>Don't know (Disabled)</label></p>
-		  
-		  <p>
-		  <input id="milk" class="w3-check" type="checkbox" checked="checked">
-		  <label>Stay logged in</label></p>
-		  
-		  <p>
-		  <button class="w3-button w3-section w3-teal w3-ripple"> Log in </button></p>
-		  
-		  </form>
-		  
-		  </div>
-		  
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+<!--  Map/ Location  -->
+<img src="IMAGES/map.jpg">
+<footer>
+    <p>ZeroSeven &copy; 2020</p>
+</footer>
+</div>
+<!-- wrapper ends -->
+
+
 </body>
 </html>
