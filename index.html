@@ -160,7 +160,7 @@ footer {
 	padding: 1rem;
 
 }
-@media(max-width: 700px) {
+@media(max-width: 10px) {
 	.top-container {
 		grid-template-areas: 
 		'showcase showcase'
@@ -190,10 +190,11 @@ footer {
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
   <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+    <a href="#logo" class="w3-bar-item w3-button w3-wide">LOGO</a>
     <!-- Right-sided navbar links -->
     <div class="w3-right">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+		<a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+      <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-question"></i>ABOUT</a>
       <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SERVICES</a>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>HIRING</a>
       <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT US</a>
@@ -207,16 +208,23 @@ footer {
 </div>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+<nav class="w3-bar-block w3-bar-block w3-black w3-card" style="display:none" id="myNavbar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+  <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+  <a href="#hiring" onclick="w3_close()" class="w3-bar-item w3-button">HIRING</a>
+  <a href="#contact us" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
 </nav>
 
 <!-- Header with full-height image -->
+<div class="w3-container" id="home">
 <img src="IMAGES/home3.jpeg" style="110%">
+</div>
+
+
+
+
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h1 class="w3-center">ABOUT ZERO SEVEN</h1>
@@ -330,7 +338,7 @@ footer {
       <div style="margin-top:48px">
         <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Nairobi,Kenya</p>
         <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254704445312</p>
-        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndongi@gmail.</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndonji@gmail.</p>
     </form>
 <script>
 // Modal Image Gallery
