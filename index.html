@@ -1,240 +1,122 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>ZERO SEVEN</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-</head>
+<title>ZERO SEVEN</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h2,h4,h5,h6 {font-family: "Raleway", sans-serif; font-size: 20px;}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+  background-color: rgb(65, 65, 65);
+}
+
+h1{font-size: 60px;}
+
+h3{font-size: 60px;}
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.w3-container{background-color:rgb(65, 65 ,65);
+}
+</style>
 <body>
-	
-    <style>
-        *
-{
 
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-h1{
-	font-size: 100px;
-	color: black;
-	text-align: center;
-}
-body
-{
-	background-color: #39393b;
-	color: black;
-}
-.menu-bar
-{
-	background: rgb(43, 43, 43);
-	text-align: center;
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SERVICES</a>
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>HIRING</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT US</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-}
-.menu-bar ul
-{
-	display: inline-flex;
-	list-style: none;
-	color: #fff;
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT US</a>
+</nav>
+
+<!-- Header with full-height image -->
+    <img src="IMAGES/home3.jpeg" style="width: 100%;">
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 16px" id="about">
+  <h1 class="w3-center">ABOUT ZERO SEVEN</h1>
+  <p>The domestic service application aims at creating a free platform for the largest domestic services supply and demand in communities near you. It is simply going to act as a bridge connecting service providers and consumers.
+    A research carried out by Ipsos on August 2018 shows that about 45% of Kenyans are self-employed whereas 12% of the population is unemployed. Only about 11% are employed in the private sector. According to the survey, main source of self-employment are foodstuffs kiosk, agriculture produce marketing, general goods kiosk, livestock marketing, boutique, hairdressing, transport, builder and in the mechanical repairs. (Information extracted from the Ipsos survey)
+    The idea is to advertise this self employed population that administers domestic services so that it is easier for them to reach potential consumers. 
+   </p>
 
 
-}
-.menu-bar ul li
-{
-	width: 120px;
-	margin: 15px;
-	padding: 15px;
+<!-- We Are Hiring -->
+<div class="w3-container w3-center" style="width: 100%;" id="pricing">
+  <h3>WE ARE HIRING</h3>
+  <p class="w3-large">If you offer any of the services above we are hiring.</p>
+  <img src="IMAGES/hiring1.jpg" width="100%">
 
-}
-.menu-bar ul li a
-{
-	text-decoration: none;
-	color: #fff;
-
-}
-.active, .menu-bar ul li:hover
-{
-	background: #0f0f0f;
-	border-radius: 3px;
-}
-.menu-bar .fa
-{
-	margin-right: 8px;
-}
-.sub-menu-1
-{
-	display: none;
-}
-.menu-bar ul li:hover .sub-menu-1
-{
-	display: block;
-	position: absolute;
-	background: #3d3d3d;
-	margin-top: 15px;
-	margin-left: -15px;
-}
-.menu-bar ul li:hover .sub-menu-1 ul
-{
-	display: block;
-	margin: 10px;
-
-}
-.menu-bar ul li:hover .sub-menu-1 ul li
-{
-	width: 150px;
-	padding: 10px:
-	border-bottom: 1px dotted #fff;
-	background: transparent;
-	border-radius: 0;
-	text-align: left;
-
-}
-.menu-bar ul li:hover .sub-menu-1 ul li a:hover 
-{
- color: #343636;
-} 
-;
-
-}
-body {
-  font-family: Arial;
+<!-- Contact Section -->
+<div class="w3-container " style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT US</h3>
+  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+  <div style="margin-top:48px">
+    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Nairobi,Kenya</p>
+    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254704445312</p>
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndongi@gmail.</p>
+    <br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="w3-button w3-black" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
 }
 
-* {
-  box-sizing: border-box;
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
 }
 
-form.example input[type=text] {
-  padding: 10px;
-  font-size: 17px;
-  border: 1px solid grey;
-  float: left;
-  width: 80%;
-  background: #f1f1f1;
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
 }
+</script>
 
-form.example button {
-  float: left;
-  width: 20%;
-  padding: 10px;
-  background: #0f0f0f;
-  color: rgb(17, 17, 17);
-  font-size: 17px;
-  border: 1px solid grey;
-  border-left: none;
-  cursor: pointer;
-}
-
-form.example button:hover {
-  background: #0f0f0f;
-}
-
-form.example::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-	</style>
-	<!--  NavBar  -->
-	<div class="menu-bar">
-	<ul>
-		<li class="active"><a href="#"><i class="fa fa-home"><alt=""></i>Home</a></li>
-		<li><a href="#">About ZERO 7</a></li>
-		<li><a href="#">Services</a>
-			<div class="sub-menu-1">
-				<ul>
-					<li><a href="child care.html"></a>Child Care</li>
-					<li><a href="Laundry.html"></a>Laundry Services</li>
-					<li><a href="general.html"></a>General house chores</li>
-					<li><a href="carwash.html"></a> Car wash services</li>
-					<li><a href="private.html"></a> Private tutoring</li>
-					<li><a href="private.html"></a>Carpet washing</li>
-					<li><a href="private.html"></a>Plumbing/electric works</li>
-					<li><a href="private.html"></a>Temporary driver</li>
-					<li><a href="private.html"></a>Car Mechanic/Car servicing.</li>
-					<li><a href="private.html"></a>Fumigation</li>
-					<li><a href="private.html"></a>Catering and baking services</li>
-					<li><a href="private.html"></a>WIFI installation</li>
-					<li><a href="private.html"></a>Painting</li>
-					<li><a href="private.html"></a>Masonry</li>
-					<li><a href="private.html"></a>Interior designers.</li>
-					<li><a href="private.html"></a>Hair-dressers</li>
-					
-
-				</ul>
-
-		</li>
-		<li><a href="#">We Are Hiring</a></li>
-		<li><a href="#">Contact us</a></li>
-<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
-  <input type="text" placeholder="Search.." name="search2">
-  <button type="submit"><i class="fa fa-search"></i></button>
-</form>
-	</div>
-	</ul>
-		 </div>
-		 <!-- Header /Home   -->
-		 <div class="header">
-		 <img src="IMAGES/home3.jpeg" alt="tyjj" width="100%">
-		 </div>
-		 <!--   ABOUT US     -->
-		 <h1>ABOUT US</h1>
-		 <p>The domestic service application aims at creating a free platform for the largest domestic services supply and demand in communities near you. It is simply going to act as a bridge connecting service providers and consumers.
-			A research carried out by Ipsos on August 2018 shows that about 45% of Kenyans are self-employed whereas 12% of the population is unemployed. Only about 11% are employed in the private sector. According to the survey, main source of self-employment are foodstuffs kiosk, agriculture produce marketing, general goods kiosk, livestock marketing, boutique, hairdressing, transport, builder and in the mechanical repairs. (Information extracted from the Ipsos survey)
-			The idea is to advertise this self employed population that administers domestic services so that it is easier for them to reach potential consumers. 
-		   </p>
-
-		 <!--     Services Offered     -->
-
-
-
-		 <!--    We are Hiring    -->
-
-		 <h1>WE ARE HIRING!!!!</h1>
-		 <br>
-		 <img src="IMAGES/hiring3.jpg" alt="yujh" width="100%">
-
-		 <!--    Contact Us     -->
-		 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-		 <header class="w3-container w3-teal">
-			<h1>Contact Us</h1>
-		  </header>
-		  
-		  <div class="w3-container w3-margin-center">
-		  
-		  <form class="w3-container w3-card-4">
-		  
-		  <p>
-		  <input class="w3-input" type="text" style="width:50%" required>
-		  <label>Name</label></p>
-		  <p>
-		  <input class="w3-input" type="password" style="width:50%" required>
-		  <label>Password</label></p>
-		  
-		  <p>
-		  <input class="w3-radio" type="radio" name="gender" value="male" checked>
-		  <label>Male</label></p>
-		  
-		  <p>
-		  <input class="w3-radio" type="radio" name="gender" value="female">
-		  <label>Female</label></p>
-		  
-		  <p>
-		  <input class="w3-radio" type="radio" name="gender" value="" disabled>
-		  <label>Don't know (Disabled)</label></p>
-		  
-		  <p>
-		  <input id="milk" class="w3-check" type="checkbox" checked="checked">
-		  <label>Stay logged in</label></p>
-		  
-		  <p>
-		  <button class="w3-button w3-section w3-teal w3-ripple"> Log in </button></p>
-		  
-		  </form>
-		  
-		  </div>
-		  
 </body>
 </html>
