@@ -26,6 +26,51 @@ h3{font-size: 20px;}
 .w3-container{background-color:rgb(7 , 129, 34);
 }
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.icon {
+  float: right;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 :root{
 	--primary: #ddd;
 	--dark: #333;
@@ -182,6 +227,47 @@ footer {
 	}
 }
 
+<!--Mobile View-->
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  float: left;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a.icon {
+  float: right;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
 
 
 </style>
@@ -292,7 +378,7 @@ footer {
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
 			</div><div class="box">
 				<i class="fa fa-wifi fa-2x" ></i>
-				<h3>Wifi instalattion</h3>
+				<h3>Wifi Installation</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
 			</div>
 			<div class="box">
@@ -312,6 +398,45 @@ footer {
 			</div>
 		</section>
 </div>
+
+<!-- Simulate a smartphone / tablet look -->
+<div class="mobile-container">
+
+	<!-- Top Navigation Menu -->
+	<div class="topnav">
+	  <a href="#logo" class="active">Logo</a>
+	  <div id="myLinks">
+		<a href="#home">Home</a>
+		<a href="#about us">About Us</a>
+		<a href="#services">Services</a>
+		<a href="#hiring">Hiring</a>
+		<a href="#contact us">Contact</a>
+	  </div>
+	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+		<i class="fa fa-bars"></i>
+	  </a>
+	</div>
+	
+	<div style="padding-left:16px">
+	  <h3>Horizontal Mobile Navbar</h3>
+	  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
+	  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
+	  <p><strong>Note that this example should'nt be used if you have a lot of links, as they will "break" the navbar when there's too many (especially on very small screens).</strong></p>
+	</div>
+	
+	<!-- End smartphone / tablet look -->
+	</div>
+	
+	<script>
+	function myFunction() {
+	  var x = document.getElementById("myLinks");
+	  if (x.style.display === "block") {
+		x.style.display = "none";
+	  } else {
+		x.style.display = "block";
+	  }
+	}
+	</script>
 
 
 <!-- We Are Hiring -->
