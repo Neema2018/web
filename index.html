@@ -12,17 +12,178 @@ body,h2,h4,h5,h6 {font-family: "Raleway", sans-serif; font-size: 20px;}
 body, html {
   height: 100%;
   line-height: 1.8;
-  background-color: rgb(65, 65, 65);
+  background-color: rgb(7, 129, 34);
 }
 
-h1{font-size: 60px;}
+h1{font-size: 60px;
+   text-align: center;
+}
 
-h3{font-size: 60px;}
+h3{font-size: 20px;}
 .w3-bar .w3-button {
   padding: 16px;
 }
-.w3-container{background-color:rgb(65, 65 ,65);
+.w3-container{background-color:rgb(7 , 129, 34);
 }
+
+:root{
+	--primary: #ddd;
+	--dark: #333;
+	--light: #fff;
+	--shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+html {
+	box-sizing: border-box;
+	font-family: Arial, Helvtica;
+	color: var(--dark);
+}
+body {
+	background: #ccc;
+	margin: 30px 50px;
+	line-height: 1.4;
+
+}
+.btn {
+	background: var(--dark);
+	color: var(--light);
+	padding: 0.6rem 1.3rem;
+	text-decoration: none;
+	border: 0;
+}
+.img{
+	max-width: 100%;
+}
+
+.wrapper {
+	display: grid;
+	grid-gap: 20px;
+}
+
+.top-container{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-areas: 
+	'showcase showcase top-box-a'
+	'showcase showcase top-box-b'
+}
+
+.showcase {
+	grid-area: showcase;
+	min-height: 400px;
+	background: url(s.jpeg);
+	background-size: cover;
+	background-position: center;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	box-shadow: var(--shadow);
+}
+.showcase h1 {
+	font-size: 4rem;
+	margin-bottom: 0;
+	color: var(--light);
+
+}
+.showcase p {
+	font-size: 1.3rem;
+	margin-top: 0;
+	color: var(--light);
+
+}
+.top-box {
+	background: var(--primary);
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	box-shadow: var(--shadow);
+	padding: 1.5rem;
+
+}
+
+.top-box .price {
+	font-size: 2.5rem;
+}
+
+.top-box-a {
+	grid-area: top-box-a; 
+}
+
+.top-box-b {
+	grid-area: top-box-b; 
+}
+
+
+.boxes {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)
+	);
+}
+
+.box {
+	background: var(--primary);
+	text-align: center;
+	padding: 1.5rem 2rem;
+	box-shadow: var(--shadow);
+
+}
+.info {
+	background: var(--primary);
+	box-shadow: var(--shadow);
+	display: grid;
+	grid-gap: 30px;
+	grid-template-columns: repeat(2, 1fr);
+	padding: 3rem;
+
+}
+
+.portfolio {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)
+	);
+}
+
+.portfolio img {
+	width: 100%;
+	box-shadow: var(--shadow);
+
+}
+
+footer {
+	margin-top: 2rem;
+	background: var(--dark);
+	color: var(--light);
+	text-align: center;
+	padding: 1rem;
+
+}
+@media(max-width: 700px) {
+	.top-container {
+		grid-template-areas: 
+		'showcase showcase'
+		'top-box-a top-box-b'
+	}
+
+	.showcase h1 {
+		font-size: 2.5rem;
+	}
+
+	.info {
+		grid-template-columns: 1fr;
+	}
+
+	.info.btn {
+		display: block;
+		text-align: center;
+		margin: auto;
+	}
+}
+
+
+
 </style>
 <body>
 
@@ -31,7 +192,7 @@ h3{font-size: 60px;}
   <div class="w3-bar w3-white w3-card" id="myNavbar">
     <a href="#home" class="w3-bar-item w3-button w3-wide">HOME</a>
     <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
+    <div class="w3-right">
       <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
       <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SERVICES</a>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>HIRING</a>
@@ -55,7 +216,7 @@ h3{font-size: 60px;}
 </nav>
 
 <!-- Header with full-height image -->
-    <img src="IMAGES/home3.jpeg" style="width: 100%;">
+<img src="IMAGES/home3.jpeg" style="110%">
 <!-- About Section -->
 <div class="w3-container" style="padding:128px 16px" id="about">
   <h1 class="w3-center">ABOUT ZERO SEVEN</h1>
@@ -64,21 +225,97 @@ h3{font-size: 60px;}
     The idea is to advertise this self employed population that administers domestic services so that it is easier for them to reach potential consumers. 
    </p>
 
+   <!--  Services  -->
+   <h1>OUR SERVICES</h1>
+   <div class="w3-container" id="services"></div>
+		<section class="boxes">
+			<div class="box">
+				<i class="fa fa-child fa-2x" ></i>
+				<h3>Child care</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-sign-language fa-2x" ></i>
+				<h3>Laundry Services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-black-tie fa-2x" ></i>
+				<h3>General house chore</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-book fa-2x" ></i>
+				<h3>Private tutoring</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-car fa-2x" ></i>
+				<h3>Car wash services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-snowflake-o fa-2x" ></i>
+				<h3>Carpet washing</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-wrench fa-2x" ></i>
+				<h3>Plumbing/Electric works</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-taxi fa-2x" ></i>
+				<h3>Temporary driver</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-cogs fa-2x" ></i>
+				<h3>Car mechanic</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-bug fa-2x" ></i>
+				<h3>Fumigation</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div><div class="box">
+				<i class="fa fa-cutlery fa-2x" ></i>
+				<h3>Catering and Baking services</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div><div class="box">
+				<i class="fa fa-wifi fa-2x" ></i>
+				<h3>Wifi instalattion</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-paint-brush fa-2x" ></i>
+				<h3>Painting</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-hand-lizard-o fa-2x" ></i>
+				<h3>Masonry</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+			<div class="box">
+				<i class="fa fa-home fa-2x" ></i>
+				<h3>Interior designers</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, </p>
+			</div>
+		</section>
+</div>
+
 
 <!-- We Are Hiring -->
 <div class="w3-container w3-center" style="width: 100%;" id="pricing">
-  <h3>WE ARE HIRING</h3>
+  <h1>WE ARE HIRING</h1>
   <p class="w3-large">If you offer any of the services above we are hiring.</p>
   <img src="IMAGES/hiring1.jpg" width="100%">
 
 <!-- Contact Section -->
 <div class="w3-container " style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT US</h3>
+  <h1 class="w3-center">CONTACT US</h1>
   <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Nairobi,Kenya</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254704445312</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndongi@gmail.</p>
     <br>
     <form action="/action_page.php" target="_blank">
       <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
@@ -90,6 +327,10 @@ h3{font-size: 60px;}
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
+      <div style="margin-top:48px">
+        <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i>Nairobi,Kenya</p>
+        <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +254704445312</p>
+        <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email:rndongi@gmail.</p>
     </form>
 <script>
 // Modal Image Gallery
@@ -117,6 +358,13 @@ function w3_close() {
     mySidebar.style.display = "none";
 }
 </script>
+
+<footer>
+    <p>ZeroSeven &copy; 2020</p>
+</footer>
+</div>
+<!-- wrapper ends -->
+
 
 </body>
 </html>
