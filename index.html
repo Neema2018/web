@@ -21,69 +21,47 @@ h1{font-size: 60px;
 h3{font-size: 20px;
 }
 
-.w3-container{background-color:black;
+.w3-container{
+	background-color:black;
+	padding-left: initial;
 }
 
-/*  Media Queries */
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 667px) 
-  and (-webkit-min-device-pixel-ratio: 2) { 
-
-}
-
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-@media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px) 
-  and (-webkit-min-device-pixel-ratio: 3) { 
-
-}
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 2) {
-
-}
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 4) {
-
-}
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-}
-@media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 2)
-  and (min-resolution: 192dpi) { 
-}
-@media
-  (max-device-width: 42mm)
-  and (min-device-width: 38mm) { 
-
-}
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) {
-
-}
-@media screen 
-  and (device-width: 360px) 
-  and (device-height: 640px) 
-  and (-webkit-device-pixel-ratio: 3) {
-
-}
+/*Media Queries */
+@keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
 
 
 /*Styling for the services section */
@@ -245,14 +223,14 @@ footer {
 <body>
 
 <!-- Navbar (sit on top) -->
-<div class="w3-nav-bar">
+<div class="w3-container w3-nav-bar ">
 <div class="w3-top">
-  <div class="w3-bar w3-red w3-card" id="myNavbar">
+  <div class="w3-bar w3-red" id="myNavbar">
 	<a href="#logo" class="w3-bar-item w3-button w3-wide">LOGO</a>
 
     <!-- Right-sided navbar links -->
-    <div class="w3-right">
-		<a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+    <div class="w3-center">
+	  <a href="#home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
       <a href="#about" class="w3-bar-item w3-button"><i class="fa fa-question"></i>ABOUT</a>
       <a href="#services" class="w3-bar-item w3-button"><i class="fa fa-th"></i> SERVICES</a>
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>HIRING</a>
@@ -264,7 +242,7 @@ footer {
 
 <!-- Header with full-height image -->
 		<div class="w3-container " id="home">
-		<img class="w3-image" src="IMAGES/home3.jpeg" alt="Architecture" width="100%">
+		<img class="w3-image" src="IMAGES/home3.jpeg" alt="Architecture" width="3000px" height="1000px">
 		</div>
 
 <!-- About Section -->
