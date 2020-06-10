@@ -24,26 +24,67 @@ h3{font-size: 20px;
 .w3-container{background-color:black;
 }
 
-/* For desktop: */
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+/*  Media Queries */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
-  }
 }
+
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) {
+
+}
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 4) {
+
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (min-resolution: 192dpi) { 
+}
+@media
+  (max-device-width: 42mm)
+  and (min-device-width: 38mm) { 
+
+}
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 3) {
+
+}
+
 
 /*Styling for the services section */
 :root{
@@ -179,7 +220,7 @@ footer {
 	padding: 1rem;
 
 }
-@media(max-width: 1px) {
+@media(max-width: 10px) {
 	.top-container {
 		grid-template-areas: 
 		'showcase showcase'
@@ -191,7 +232,7 @@ footer {
 	}
 
 	.info {
-		grid-template-columns: 1fr;
+		grid-template-columns: 5fr;
 	}
 
 	.info.btn {
@@ -217,28 +258,17 @@ footer {
       <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i>HIRING</a>
 	  <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
 	</div>
-	
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-	</a>
-</div>
-</div>
-  </div>
-</div>
-</div>
-</div>
+	</div>
+	</div>
+	</div>
 
 <!-- Header with full-height image -->
-<header>
-	<div class="background-image">
-
-	</div>
-</header>
-</div>
+		<div class="w3-container " id="home">
+		<img class="w3-image" src="IMAGES/home3.jpeg" alt="Architecture" width="100%">
+		</div>
 
 <!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
+<div class="w3-container" id="about">
   <h1 class="w3-center">ABOUT ZERO SEVEN</h1>
   <p>The domestic service application aims at creating a free platform for the largest domestic services supply and demand in communities near you. It is simply going to act as a bridge connecting service providers and consumers.
     A research carried out by Ipsos on August 2018 shows that about 45% of Kenyans are self-employed whereas 12% of the population is unemployed. Only about 11% are employed in the private sector. According to the survey, main source of self-employment are foodstuffs kiosk, agriculture produce marketing, general goods kiosk, livestock marketing, boutique, hairdressing, transport, builder and in the mechanical repairs. (Information extracted from the Ipsos survey)
