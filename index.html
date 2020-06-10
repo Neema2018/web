@@ -24,6 +24,27 @@ h3{font-size: 20px;
 .w3-container{background-color:black;
 }
 
+/* For desktop: */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
 /*Styling for the services section */
 :root{
 	--primary: rgb(29, 28, 28);
@@ -185,7 +206,7 @@ footer {
 <!-- Navbar (sit on top) -->
 <div class="w3-nav-bar">
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
+  <div class="w3-bar w3-red w3-card" id="myNavbar">
 	<a href="#logo" class="w3-bar-item w3-button w3-wide">LOGO</a>
 
     <!-- Right-sided navbar links -->
@@ -206,10 +227,14 @@ footer {
   </div>
 </div>
 </div>
+</div>
 
 <!-- Header with full-height image -->
-<div class="w3-container" id="home">
-<img src="IMAGES/home3.jpeg" style="width: 300%;">
+<header>
+	<div class="background-image">
+
+	</div>
+</header>
 </div>
 
 <!-- About Section -->
